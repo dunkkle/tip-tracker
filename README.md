@@ -1,40 +1,7 @@
-Ionic App Base
+TipTrack App
 =====================
+An app to help servers and bartenders track tips, payouts, wages, and hours. Based on the Ionic Framework, using Firebase as the backend.
 
-A starting project for Ionic that optionally supports
-using custom SCSS.
-
-## Using this project
-
-We recommend using the `ionic` utility to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
-```bash
-$ sudo npm install -g ionic
-```
-
-Then run:
-
-```bash
-$ sudo npm install -g ionic
-$ ionic start myProject tabs
-```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page.
-
-## Installation
-
-While we recommend using the `ionic` utility to create new Ionic projects, you can use this repo as a barebones starting point to your next Ionic app.
-
-To use this project as is, first clone the repo from GitHub, then run:
-
-```bash
-$ cd ionic-app-base
-$ sudo npm install -g cordova ionic gulp
-$ npm install
-$ gulp init
-```
 
 ## Using Sass (optional)
 
@@ -51,6 +18,4 @@ the include to your `ionic.app.css` file which now contains all your Sass code a
 <link href="css/ionic.app.css" rel="stylesheet">
 -->
 ```
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/contribute/#issues) to the main Ionic repository. On the other hand, pull requests are welcome here!
 
