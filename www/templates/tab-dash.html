@@ -1,19 +1,119 @@
 <ion-view title="Dashboard">
-  <ion-content class="has-header padding">
-    <h1>Dashboard</h1>
 
+
+  <ion-content class="has-header padding">
+   <ion-scroll>
+   
       <div ng-controller="ShiftController">
-          <ul ng-repeat="shift in shifts">
-            <li>{{shift.user}}: {{shift.hoursWorked}} hours, {{shift.netTips}} <br>
-            	{{shift.id}}</li>
-          </ul>
-          <form ng-submit="addShift();">
-            <input type="text" ng-model="hoursWorked"/>
-            <input type="text" ng-model="netTips"/>
-            <input type="submit" value="Add Shift"/>
-          </form>
+
+        
+        <form ng-model="newShift" ng-submit="addShift();">
+
+        <!-- Date -->
+        <div class="list list-inset">
+          <label class="item item-input">
+              <input type="date" ng-model="shiftDate">
+            </label>
+        </div>
+
+
+         
+         <!-- Shift Types -->
+         <div class="list list-inset"> 
+          <div class="item item-divider">
+               Shift Type
+          </div>
+            <label class="item item-radio">
+              <input type="radio" name="shiftType" value="Lunch" ng-model="shiftType">
+              <div class="item-content">
+                Lunch
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+            <label class="item item-radio">
+              <input type="radio" name="shiftType" value="Dinner" ng-model="shiftType">
+              <div class="item-content">
+                Dinner
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+          </div> 
+          <!-- /shiftTypes -->
+
+          <!-- Shift Role -->
+          <div class="list list-inset">
+          
+              <div class="item item-divider">
+               Shift Role
+              </div>
+            <label class="item item-radio">
+              <input type="radio" name="shiftRole" value="Server" ng-model="shiftRole">
+              <div class="item-content">
+                Server
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+            <label class="item item-radio">
+              <input type="radio" name="shiftRole" value="Manager" ng-model="shiftRole">
+              <div class="item-content">
+                Manager
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+          </div>
+          <!-- /shiftRole -->
+
+        <!-- Shift Data -->
+          <div class="list list-inset">
+          
+            <div class="item item-divider">
+                 Data
+            </div>
+
+            <label class="item item-input">
+              <input type="number" placeholder="Hours Worked" ng-model="shiftHoursWorked">
+            </label>
+             <label class="item item-input">
+              <input type="number" placeholder="Sales" ng-model="shiftSales">
+            </label>
+            <label class="item item-input">
+              <input type="number" placeholder="Tips" ng-model="shiftGrossTips">
+            </label>
+             <label class="item item-input">
+              <input type="number" placeholder="Payout" ng-model="shiftPayout">
+            </label>
+
+          </div>
+          <!-- /shiftData -->
+
+          <ion-item type="card">
+            Net Tips: ${{shiftGrossTips - shiftPayout}} <br>
+            Tip Percentage: {{(shiftGrossTips / shiftSales) * 100}} %
+          </ion-item>
+
+          <input type="submit" class="button button-block button-positive" value="Add Shift" />
+       
+         
+        </form>
+
+
+      
+        <ion-list>
+          <ion-item ng-repeat="(name, shift) in shifts | orderByPriority | orderBy:'timeStamp' | reverse"  item-type="card" item="shift" can-swipe="true">
+          {{shift.user}}: {{shift.hoursWorked}} hours, {{shift.netTips}} tips <br>
+          All Data: {{shift}}<br>
+          {{shift.timeStamp}}<br>
+          ShiftName:{{name}}
+             
+          </ion-item>
+        </ion-list>
+      </ion-scroll>
+       
+        
       </div>
 
 
   </ion-content>
+
 </ion-view>
+

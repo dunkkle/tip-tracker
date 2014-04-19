@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B6CFBB4F-8061-41EB-A5A1-D814FCB82ACE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloCordova</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EAD372EC-2C5B-4D11-8FD6-A97C9EB34FDC</key>
+		<string>https://github.com/uclshea/tip-tracker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/HelloCordova.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EAD372EC-2C5B-4D11-8FD6-A97C9EB34FDC</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/uclshea/tip-tracker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAD372EC-2C5B-4D11-8FD6-A97C9EB34FDC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAD372EC-2C5B-4D11-8FD6-A97C9EB34FDC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tips</string>
+		</dict>
+	</array>
+</dict>
+</plist>
