@@ -44,8 +44,14 @@ angular.module('starter.controllers', [])
 		});
 
 	// Return Form inputs to Null...
-	$scope.shiftHoursWorked = "";
-	$scope.shiftNetTips ="";
+	$scope.shiftType = "";
+	$scope.shiftRole ="";
+	$scope.shiftDate ="";
+	$scope.shiftHoursWorked ="";
+	$scope.shiftSales ="";
+	$scope.shiftGrossTips ="";
+	$scope.shiftPayout ="";
+	
 
 
 	};
