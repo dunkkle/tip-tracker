@@ -3,23 +3,97 @@
 
   <ion-content class="has-header padding">
    <ion-scroll>
-
-    <h1>Dashboard</h1>
-
- 
+   
       <div ng-controller="ShiftController">
 
         
-         <form ng-model="newShift" ng-submit="addShift();">
-         <div class="list list-inset">
+        <form ng-model="newShift" ng-submit="addShift();">
+
+        <!-- Date -->
+        <div class="list list-inset">
           <label class="item item-input">
-            <input type="number" placeholder="Hours Worked" ng-model="shiftHoursWorked">
-          </label>
-          <label class="item item-input">
-            <input type="number" placeholder="Tips" ng-model="shiftNetTips">
-          </label>
-          <input type="submit" class="button button-block button-positive" value="Add Shift" />
+              <input type="date" ng-model="shiftDate">
+            </label>
         </div>
+
+
+         
+         <!-- Shift Types -->
+         <div class="list list-inset"> 
+          <div class="item item-divider">
+               Shift Type
+          </div>
+            <label class="item item-radio">
+              <input type="radio" name="shiftType" value="Lunch" ng-model="shiftType">
+              <div class="item-content">
+                Lunch
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+            <label class="item item-radio">
+              <input type="radio" name="shiftType" value="Dinner" ng-model="shiftType">
+              <div class="item-content">
+                Dinner
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+          </div> 
+          <!-- /shiftTypes -->
+
+          <!-- Shift Role -->
+          <div class="list list-inset">
+          
+              <div class="item item-divider">
+               Shift Role
+              </div>
+            <label class="item item-radio">
+              <input type="radio" name="shiftRole" value="Server" ng-model="shiftRole">
+              <div class="item-content">
+                Server
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+            <label class="item item-radio">
+              <input type="radio" name="shiftRole" value="Manager" ng-model="shiftRole">
+              <div class="item-content">
+                Manager
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </label>
+          </div>
+          <!-- /shiftRole -->
+
+        <!-- Shift Data -->
+          <div class="list list-inset">
+          
+            <div class="item item-divider">
+                 Data
+            </div>
+
+            <label class="item item-input">
+              <input type="number" placeholder="Hours Worked" ng-model="shiftHoursWorked">
+            </label>
+             <label class="item item-input">
+              <input type="number" placeholder="Sales" ng-model="shiftSales">
+            </label>
+            <label class="item item-input">
+              <input type="number" placeholder="Tips" ng-model="shiftGrossTips">
+            </label>
+             <label class="item item-input">
+              <input type="number" placeholder="Payout" ng-model="shiftPayout">
+            </label>
+
+          </div>
+          <!-- /shiftData -->
+
+          <ion-item type="card">
+            Net Tips: ${{shiftGrossTips - shiftPayout}} <br>
+            Tip Percentage: {{(shiftGrossTips / shiftSales) * 100}} %
+          </ion-item>
+
+          <input type="submit" class="button button-block button-positive" value="Add Shift" />
+       
+         
         </form>
 
 
@@ -42,3 +116,4 @@
   </ion-content>
 
 </ion-view>
+

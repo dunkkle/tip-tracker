@@ -9,6 +9,24 @@ angular.module('starter.services', [])
 
 }])
 
+//This factory provides the current date, used as the default in "Add Shift" form
+.factory("TodaysDate", function() {
+
+  var d = new Date();
+  var year = d.getFullYear();
+  var month = d.getMonth()+1;
+    if (month < 10) {
+      month = "0" + month;
+      };
+  var day = d.getDate();
+  
+  var todaysDate = year + "-" + month + "-" + day;
+
+  
+
+
+})
+
 
 // This filter should reverse items from Firebase in ng-repeat
 // Usage: <li ng-repeat="message in messages | orderByPriority | reverse">{{message.text}}</li>
