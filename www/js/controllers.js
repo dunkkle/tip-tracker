@@ -5,15 +5,17 @@ angular.module('starter.controllers', [])
 //setting up shift controller to add/get shifts
 .controller("ShiftController", ["$scope", "ShiftData", function($scope, shiftData) {
 
-  var d = new Date();
-  var year = d.getFullYear();
-  var month = d.getMonth()+1;
-    if (month < 10) {
-      month = "0" + month;
-      };
-  var day = d.getDate();
-  
-  var todaysDate = year + "-" + month + "-" + day;
+
+	 // This just creates a reference to today's date, used to pre-populate the date field
+	  var d = new Date();
+	  var year = d.getFullYear();
+	  var month = d.getMonth()+1;
+	    if (month < 10) {
+	      month = "0" + month;
+	      };
+	  var day = d.getDate();
+	  
+	  var todaysDate = year + "-" + month + "-" + day;
 
 
 	$scope.user = "Guest"; // fix this
